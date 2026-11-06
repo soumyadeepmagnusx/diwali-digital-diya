@@ -4,10 +4,10 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/✨%20Live%20Website-Open%20Digital%20Diya-f59e0b?style=for-the-badge&logo=google-chrome&logoColor=white)](https://soumyadeepmagnusx.github.io/diwali-digital-diya/)
+[![Live Demo](https://img.shields.io/badge/✨%20Live%20Website-Open%20Digital%20Diya-f59e0b?style=for-the-badge)](https://soumyadeepmagnusx.github.io/diwali-digital-diya/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/soumyadeepmagnusx/diwali-digital-diya)
-[![Tech Stack](https://img.shields.io/badge/AI-Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-[![Cloud Ready](https://img.shields.io/badge/Cloud-AWS%20%26%20Firebase-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Tech Stack](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-4285F4?style=for-the-badge)](https://ai.google.dev/)
+[![Cloud Architecture](https://img.shields.io/badge/Architecture-AWS%20%26%20Firebase%20Ready-FF9900?style=for-the-badge)](https://aws.amazon.com/)
 
 ### 🔗 **Live Website URL:** [https://soumyadeepmagnusx.github.io/diwali-digital-diya/](https://soumyadeepmagnusx.github.io/diwali-digital-diya/)
 
