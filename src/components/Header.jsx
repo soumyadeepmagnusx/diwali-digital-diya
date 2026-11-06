@@ -9,7 +9,8 @@ export default function Header({
   isPlayingAmbient,
   onToggleAmbient,
   onTriggerGrandFinale,
-  onOpenInfoModal
+  onOpenInfoModal,
+  onOpenCloudModal
 }) {
   const navItems = [
     { id: 'altar', label: 'Diya Altar', icon: Flame },
@@ -118,6 +119,15 @@ export default function Header({
           >
             <Sparkles className="w-3.5 h-3.5 text-yellow-200" />
             <span className="hidden sm:inline">Grand Finale</span>
+          </button>
+
+          {/* Cloud & AI Architecture Button */}
+          <button
+            onClick={onOpenCloudModal}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-cyan-950/50 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-900/50 transition-all shadow-[0_0_10px_rgba(6,182,212,0.3)]"
+            title="AWS & Google Cloud Architecture"
+          >
+            <span>☁️ Cloud & AI</span>
           </button>
 
           {/* Info Modal Button */}

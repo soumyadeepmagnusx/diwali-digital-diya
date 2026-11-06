@@ -11,6 +11,7 @@ export default function AiWishCrafter({ onSelectForGreetingCard }) {
   const [tone, setTone] = useState('joyful');
   const [apiKey, setApiKey] = useState('');
   const [showKeyInput, setShowKeyInput] = useState(false);
+  const [showPayload, setShowPayload] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -274,6 +275,28 @@ export default function AiWishCrafter({ onSelectForGreetingCard }) {
             <div className="flex items-center gap-2 text-xs text-amber-300 font-medium mt-2 pt-2 border-t border-amber-500/20">
               <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400 shrink-0" />
               <span>{generatedWish.personalNote}</span>
+            </div>
+
+            {/* Gemini Payload Inspector Toggle */}
+            <div className="mt-3 pt-2 border-t border-amber-500/20 flex flex-col gap-1.5">
+              <button
+                onClick={() => setShowPayload(p => !p)}
+                className="text-[11px] text-cyan-300 hover:text-cyan-200 flex items-center justify-between py-1 px-2 rounded bg-cyan-950/40 border border-cyan-500/30"
+              >
+                <span>⚡ Inspect Google Gemini 1.5 Flash API Schema</span>
+                <span className="font-mono text-[10px]">{showPayload ? '▼ Hide' : '▶ View Payload'}</span>
+              </button>
+
+              {showPayload && (
+                <div className="p-2.5 rounded-lg bg-black/80 border border-cyan-500/30 text-[10px] font-mono text-cyan-200 overflow-x-auto space-y-1">
+                  <div className="text-gray-400">// Endpoint</div>
+                  <div className="text-yellow-300">POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent</div>
+                  <div className="text-gray-400 mt-1">// Parameters</div>
+                  <div>model: "gemini-1.5-flash" | temperature: 0.8 | tokens: ~380</div>
+                  <div className="text-gray-400 mt-1">// System Cultural Context</div>
+                  <div className="text-amber-200/90">"Master poet celebrating Diwali; culturally authentic {language} vocabulary; Sanskrit shlokas and festive warmth"</div>
+                </div>
+              )}
             </div>
 
           </div>

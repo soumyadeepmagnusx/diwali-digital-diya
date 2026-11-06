@@ -7,6 +7,7 @@ import AiWishCrafter from './components/AiWishCrafter';
 import GreetingCardModal from './components/GreetingCardModal';
 import ReceiverGreetingView from './components/ReceiverGreetingView';
 import SubmissionInfoModal from './components/SubmissionInfoModal';
+import CloudArchitectureModal from './components/CloudArchitectureModal';
 import Footer from './components/Footer';
 import { 
   initAudio, 
@@ -24,6 +25,7 @@ export default function App() {
   const [isMuted, setIsMuted] = useState(false);
   const [isPlayingAmbient, setIsPlayingAmbient] = useState(false);
   const [showInfoModal, setShowInfoModal] = useState(false);
+  const [showCloudModal, setShowCloudModal] = useState(false);
   const [greetingParams, setGreetingParams] = useState(null);
   const [prefilledCardData, setPrefilledCardData] = useState(null);
 
@@ -123,6 +125,7 @@ export default function App() {
         onToggleAmbient={handleToggleAmbient}
         onTriggerGrandFinale={handleTriggerGrandFinale}
         onOpenInfoModal={() => setShowInfoModal(true)}
+        onOpenCloudModal={() => setShowCloudModal(true)}
       />
 
       {/* Main Content Area */}
@@ -172,6 +175,12 @@ export default function App() {
       <SubmissionInfoModal
         isOpen={showInfoModal}
         onClose={() => setShowInfoModal(false)}
+      />
+
+      {/* Cloud & AI Architecture Modal */}
+      <CloudArchitectureModal
+        isOpen={showCloudModal}
+        onClose={() => setShowCloudModal(false)}
       />
 
       {/* Footer */}
